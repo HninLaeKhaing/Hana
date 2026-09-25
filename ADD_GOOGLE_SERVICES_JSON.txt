@@ -1,0 +1,291 @@
+📱 HOW TO ADD google-services.json FILE
+=====================================
+
+Your Firebase SDK is already configured! ✅
+Now you just need to add the google-services.json file.
+
+
+STEP-BY-STEP GUIDE:
+==================
+
+STEP 1: Download google-services.json from Firebase Console
+----------------------------------------------------------
+
+1. Go to: https://console.firebase.google.com/
+
+2. Click your project: "hana-wellness"
+
+3. Click the gear icon ⚙️ in top left
+
+4. Select: "Project Settings"
+
+5. Scroll down to: "Your apps"
+
+6. Find your Android app: "com.example.hana"
+
+7. Click the app name to expand it
+
+8. Look for: "Download google-services.json" button
+
+9. Click it to download the file
+
+📁 File will be in: Downloads/google-services.json
+
+
+STEP 2: Add to Android Studio Project
+--------------------------------------
+
+OPTION A: Drag & Drop (Easiest)
+├─ 1. Open: C:\Users\anura\Downloads\
+├─ 2. Find: google-services.json
+├─ 3. In Android Studio, expand: app folder
+├─ 4. Right-click: app folder
+├─ 5. Select: "Show in Explorer"
+├─ 6. Drag google-services.json into the app folder
+└─ 7. Confirm when prompted
+
+
+OPTION B: Manual File Copy
+├─ 1. Open File Explorer
+├─ 2. Navigate to: C:\Users\anura\Downloads\
+├─ 3. Right-click: google-services.json
+├─ 4. Select: Copy
+├─ 5. Navigate to: C:\Users\anura\AndroidStudioProjects\Hana\app\
+├─ 6. Right-click in empty space
+├─ 7. Select: Paste
+└─ 8. File is now added!
+
+
+OPTION C: Via Android Studio
+├─ 1. In Android Studio, right-click: app folder
+├─ 2. Select: "Open in Explorer"
+├─ 3. Paste: google-services.json into this folder
+└─ 4. Return to Android Studio
+
+
+STEP 3: Verify File Location
+-----------------------------
+
+In Android Studio, you should see:
+
+Hana/
+├── app/
+│   ├── google-services.json ← FILE HERE ✅
+│   ├── build.gradle.kts
+│   ├── proguard-rules.pro
+│   ├── src/
+│   └── ...
+├── gradle/
+├── build.gradle.kts
+└── ...
+
+
+STEP 4: Sync Gradle
+------------------
+
+1. Android Studio will show a notification:
+   "Gradle files have changed. Would you like to sync now?"
+
+2. Click: "Sync Now" button
+
+3. Wait for sync to complete...
+
+4. You should see: "Gradle sync finished" ✅
+
+
+STEP 5: Rebuild Project
+----------------------
+
+In Android Studio:
+
+1. Top menu: Build → Clean Project
+   └─ Wait for completion
+
+2. Top menu: Build → Rebuild Project
+   └─ Wait for completion (green checkmark)
+
+3. Look for errors in "Build" tab at bottom
+   └─ Should show: "BUILD SUCCESSFUL" ✅
+
+
+STEP 6: Verify Setup
+-------------------
+
+Check if build was successful:
+
+❌ ERROR SIGNS:
+├─ Red squiggly lines in code
+├─ "Gradle sync failed" message
+├─ Build shows errors
+└─ File not found warnings
+
+✅ SUCCESS SIGNS:
+├─ google-services.json visible in app folder
+├─ Gradle sync successful
+├─ Build completes with "BUILD SUCCESSFUL"
+├─ No red errors
+└─ Project runs on emulator/device
+
+
+STEP 7: Test Your App
+--------------------
+
+1. Plug in Android device OR start emulator
+
+2. Click: Run → Run 'app'
+   OR Press: Shift + F10
+
+3. App should start on device
+
+4. Test Login Page:
+   ├─ See email input field ✅
+   ├─ See password input field ✅
+   ├─ See "Login ->" button ✅
+   ├─ See "Continue with Google" button ✅
+   └─ See "Create New Account" button ✅
+
+5. Test Email Login:
+   ├─ Go to Firebase Console → Authentication → Users
+   ├─ Create test user:
+   │  ├─ Email: test@example.com
+   │  ├─ Password: Test@1234
+   │  └─ Click "Add user"
+   ├─ In your app:
+   │  ├─ Enter: test@example.com
+   │  ├─ Enter: Test@1234
+   │  ├─ Click: "Login ->"
+   │  └─ Should go to HOME PAGE ✅
+
+6. Test Google Sign-In:
+   ├─ In your app, click: "Continue with Google"
+   ├─ Select your Google account
+   ├─ Should go to HOME PAGE ✅
+   └─ Should show greeting ✅
+
+
+⚠️  COMMON ISSUES & FIXES
+------------------------
+
+ISSUE 1: "API key not valid"
+├─ CAUSE: google-services.json has placeholder values
+├─ FIX: Make sure you downloaded the REAL file from Firebase
+└─ NOT the template file with "YOUR_PROJECT_ID"
+
+
+ISSUE 2: File not appearing in Android Studio
+├─ CAUSE: File might be in wrong location
+├─ FIX: Verify it's in: app/ (not app/src/ or app/src/main/)
+└─ Close & reopen Android Studio if needed
+
+
+ISSUE 3: "Gradle sync failed"
+├─ CAUSE: google-services.json is invalid JSON
+├─ FIX: Download fresh copy from Firebase Console
+└─ Or paste it if file got corrupted
+
+
+ISSUE 4: "Plugin not found: com.google.gms.google-services"
+├─ CAUSE: google-services.json missing
+├─ FIX: Make sure file is in app/ folder
+└─ Try: Build → Clean → Rebuild
+
+
+ISSUE 5: "Build failed"
+├─ CAUSE: Various reasons
+├─ FIX: Check the error log at bottom
+└─ Fix error then rebuild
+
+
+✅ FILE CHECKLIST
+----------------
+
+Before declaring success, verify:
+
+□ google-services.json file downloaded from Firebase Console
+□ File is NOT renamed (exactly: google-services.json)
+□ File is in: C:\Users\anura\AndroidStudioProjects\Hana\app\
+□ Gradle sync completed successfully
+□ Build shows "BUILD SUCCESSFUL"
+□ No red errors in Android Studio
+□ App runs on emulator/device
+□ Login page displays correctly
+□ Email field works
+□ Password field works
+□ Buttons are clickable
+
+
+📍 FILE LOCATION REFERENCE
+--------------------------
+
+If you forget where to put it:
+
+✅ CORRECT LOCATION:
+   C:\Users\anura\AndroidStudioProjects\Hana\app\google-services.json
+
+❌ WRONG LOCATIONS:
+   C:\Users\anura\AndroidStudioProjects\Hana\google-services.json (root)
+   C:\Users\anura\AndroidStudioProjects\Hana\app\src\google-services.json
+   C:\Users\anura\AndroidStudioProjects\Hana\app\src\main\google-services.json
+
+
+🚀 YOU'RE ALMOST DONE!
+--------------------
+
+Summary of what you need to do:
+
+1. ✅ Firebase SDK configured (already done)
+2. ⏳ Download google-services.json from Firebase Console
+3. ⏳ Place in: app/ folder
+4. ⏳ Sync Gradle
+5. ⏳ Rebuild project
+6. ⏳ Test your app
+
+Time to complete: ~10 minutes
+
+Result: Fully working authentication system! 🎉
+
+
+NEXT STEPS:
+-----------
+
+1. Go to: https://console.firebase.google.com/
+2. Download: google-services.json
+3. Add to: app/ folder
+4. Click: Sync Now
+5. Click: Build → Rebuild Project
+6. Run: Your app
+7. Test: Login, Google Sign-In, Sign-Up
+8. Enjoy! 🚀
+
+
+QUICK COMMAND REFERENCE:
+-----------------------
+
+Get SHA-1 (if you need it again):
+   .\gradlew.bat signingReport
+
+Build project:
+   .\gradlew.bat build
+
+Clean build:
+   .\gradlew.bat clean
+
+Rebuild:
+   .\gradlew.bat clean build
+
+
+📞 IF YOU NEED HELP:
+-------------------
+
+Check these files in your project:
+├─ FIREBASE_SDK_SETUP.md (SDK configuration guide)
+├─ QUICK_FIREBASE_SETUP.md (5-minute guide)
+├─ FIREBASE_SETUP_GUIDE.md (Detailed guide)
+├─ README_SETUP.md (Complete overview)
+└─ START_HERE.txt (Quick reference)
+
+All are in: C:\Users\anura\AndroidStudioProjects\Hana\
+
+
+✨ YOU'VE GOT THIS! 🎉
+

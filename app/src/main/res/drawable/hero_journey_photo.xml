@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Background Base -->
+    <path
+        android:fillColor="#FF231815"
+        android:pathData="M0,0 h100 v100 h-100 z" />
+
+    <!-- Stylized Sun/Energy (Mindfulness) -->
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M50,15 a15,15 0 1,0 0.1,0 z" />
+
+    <!-- Stylized Person in Yoga/Exercise Pose (Physical Harmony) -->
+    <!-- Head -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,38 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+
+    <!-- Body & Legs -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,45 L40,65 L36,85 L44,85 L47,68 L50,60 L53,68 L56,85 L64,85 L60,65 Z" />
+
+    <!-- Arms -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M50,50 L35,40 M50,50 L65,40" />
+
+    <!-- Decorative Grounding Lines -->
+    <path
+        android:fillColor="#4F3C35"
+        android:pathData="M0,90 Q50,85 100,90 L100,100 L0,100 Z" />
+
+</vector>

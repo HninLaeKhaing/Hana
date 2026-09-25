@@ -1,0 +1,322 @@
+🚀 BUILD & RUN YOUR HANA WELLNESS APP - COMPLETE GUIDE
+════════════════════════════════════════════════════════════════════════
+
+YOUR APP IS READY TO RUN! ✅
+
+Here's everything you need to do to build and run your app:
+
+
+STEP 1: Sync Gradle (1 minute)
+──────────────────────────────
+
+In Android Studio:
+1. Top menu: File → Sync with Gradle Files
+   OR
+2. Android Studio will show notification: "Gradle files have changed"
+3. Click: "Sync Now" button (blue button, bottom right)
+4. Wait for sync to complete
+5. You should see: "Gradle sync finished" ✅
+
+If error:
+└─ Click: Build → Clean Project
+└─ Then: Sync Again
+
+
+STEP 2: Clean Project (1 minute)
+────────────────────────────────
+
+In Android Studio:
+1. Top menu: Build → Clean Project
+2. Wait for it to complete
+3. Check bottom status bar for completion message
+
+
+STEP 3: Rebuild Project (3 minutes)
+───────────────────────────────────
+
+In Android Studio:
+1. Top menu: Build → Rebuild Project
+2. Wait... this will take 2-3 minutes
+3. Watch the bottom right corner
+4. You should see: "BUILD SUCCESSFUL" ✅
+
+If you see "BUILD FAILED":
+└─ Check the Build tab at bottom for error messages
+└─ Common issues:
+   ├─ google-services.json missing/invalid
+   ├─ Gradle sync failed
+   └─ Dependencies not downloaded
+
+
+STEP 4: Choose Where to Run
+───────────────────────────
+
+OPTION A: Android Emulator (No device needed)
+├─ In Android Studio: Click "AVD Manager" (device icon)
+├─ Select emulator and click play button
+├─ Wait for emulator to boot (2-3 minutes)
+└─ Emulator is now ready for app
+
+OPTION B: Real Android Device
+├─ Connect your Android phone via USB
+├─ Enable Developer Mode on phone:
+│  ├─ Settings → About Phone
+│  ├─ Tap "Build Number" 7 times
+│  ├─ Go back to Settings
+│  └─ Select "Developer Options"
+├─ Enable "USB Debugging"
+├─ Allow USB access on phone when prompted
+└─ Device is now ready for app
+
+
+STEP 5: Run Your App (2 minutes)
+────────────────────────────────
+
+In Android Studio:
+1. Top menu: Run → Run 'app'
+   OR
+2. Press: Shift + F10
+   OR
+3. Click: Green Play button (top right)
+
+Wait for app to install and launch...
+You should see your app opening on device/emulator!
+
+
+STEP 6: Grant Permissions (30 seconds)
+──────────────────────────────────────
+
+When app opens, you'll see dialogs:
+
+1. "Hana wants to access your location"
+   Click: "Allow"
+
+2. Any other permission dialogs
+   Click: "Allow"
+
+The app needs these permissions to work!
+
+
+STEP 7: Test Your App (5 minutes)
+─────────────────────────────────
+
+LOGIN PAGE:
+├─ You should see login form
+├─ Test email field (type something)
+├─ Test password field (type something)
+├─ Test "Continue with Google" button
+├─ Test "Create New Account" button
+└─ Test "Forgot Password?" link
+
+CREATE NEW ACCOUNT:
+├─ Click "Create New Account"
+├─ Fill in all fields:
+│  ├─ Email: test@example.com
+│  ├─ Password: Test@1234
+│  ├─ Full Name: John Doe
+│  ├─ Age: 25
+│  ├─ Gender: Male (from dropdown)
+│  ├─ Height: 170
+│  └─ Weight: 65
+├─ Click "Create Account"
+└─ Should navigate to HOME PAGE
+
+HOME PAGE:
+├─ You should see:
+│  ├─ "H" avatar (your initial)
+│  ├─ Greeting: "Welcome, John Doe"
+│  ├─ Location: 📍 [Your actual GPS location]
+│  ├─ Main banner with "Start Now" button
+│  ├─ Experience cards (4 cards)
+│  ├─ Daily rituals section
+│  └─ Bottom navigation (5 tabs + Scanner)
+├─ Test clicking different cards
+├─ Test clicking bottom navigation
+└─ Click Scanner button (brown circle in middle)
+
+EMAIL LOGIN (Go back):
+├─ Back to login page
+├─ Email: test@example.com
+├─ Password: Test@1234
+├─ Click "Login ->"
+└─ Should go to HOME PAGE
+
+
+TESTING GOOGLE SIGN-IN:
+├─ Back to login page
+├─ Click "Continue with Google"
+├─ Select your Google account
+└─ Should go to HOME PAGE
+
+
+QUICK TROUBLESHOOTING
+─────────────────────
+
+Problem: "Build Failed"
+Solution:
+├─ Check if google-services.json is in app/ folder
+├─ If not present:
+│  ├─ Download from Firebase Console
+│  ├─ Add to app/ folder
+│  └─ Rebuild
+└─ Check Build tab for specific error
+
+Problem: "Gradle sync failed"
+Solution:
+├─ Build → Clean Project
+├─ File → Sync with Gradle Files
+└─ Rebuild Project
+
+Problem: "Application crashed"
+Solution:
+├─ Check Logcat (bottom of Android Studio)
+├─ Look for red error messages
+├─ Check if permissions are granted
+└─ Verify google-services.json is valid
+
+Problem: "Location shows as 'Getting location...'"
+Solution:
+├─ Grant location permission when app asks
+├─ If using emulator, set fake location:
+│  ├─ Extended Controls → Location
+│  ├─ Set city or coordinates
+│  └─ Restart app
+└─ Real device should show actual location
+
+Problem: "Login doesn't work"
+Solution:
+├─ Make sure you have google-services.json
+├─ Create test user in Firebase Console:
+│  ├─ Authentication → Users
+│  ├─ Add user button
+│  ├─ Email: test@example.com
+│  ├─ Password: Test@1234
+│  └─ Click "Add user"
+└─ Try login again
+
+
+APP FEATURES TO TEST
+────────────────────
+
+✅ Email & Password Authentication
+   └─ Try creating account and logging in
+
+✅ Google Sign-In
+   └─ Click "Continue with Google" button
+
+✅ User Profile
+   └─ Verify all fields save (name, age, etc.)
+
+✅ Home Page Welcome
+   └─ Check greeting shows your name
+
+✅ GPS Location Display ← NEW!
+   └─ Location should show on home page
+   └─ Should update if you move (real device)
+   └─ Shows city, state, country format
+
+✅ Navigation
+   └─ Click different cards
+   └─ Click bottom navigation tabs
+   └─ Click Scanner button (brown circle)
+
+✅ Material Design 3 UI
+   └─ Check buttons look nice
+   └─ Check animations are smooth
+   └─ Check colors are consistent
+
+
+WHAT YOUR APP HAS
+─────────────────
+
+✅ Firebase Authentication
+✅ Email & Password Login
+✅ Google OAuth 2.0 Sign-In
+✅ User Registration with Profile
+✅ Password Reset
+✅ Real GPS Location Display (DYNAMIC!)
+✅ Material Design 3 UI
+✅ Bottom Navigation (5 tabs + Scanner)
+✅ Home Page with Greeting
+✅ Experience Cards
+✅ Daily Rituals
+✅ Error Handling
+✅ Input Validation
+
+
+COMMAND-LINE ALTERNATIVE
+─────────────────────────
+
+If you prefer using terminal:
+
+1. Navigate to project:
+   cd C:\Users\anura\AndroidStudioProjects\Hana
+
+2. Build:
+   .\gradlew.bat build
+
+3. Install and run:
+   .\gradlew.bat installDebug
+   adb shell am start -n com.example.hana/.MainActivity
+
+4. View logs:
+   adb logcat
+
+
+EMULATOR SETUP (If needed)
+──────────────────────────
+
+1. Open Android Studio
+2. Click "AVD Manager" (device icon, top right)
+3. Click "Create Virtual Device"
+4. Select device (Pixel 4 recommended)
+5. Choose Android version (Android 12 or higher)
+6. Click "Finish"
+7. Your emulator appears in the list
+8. Click play button to start it
+9. Wait for emulator to boot
+10. Ready to run app!
+
+
+NEXT STEPS AFTER RUNNING
+────────────────────────
+
+1. Test all features
+2. Verify GPS location shows correctly
+3. Check Firebase integration works
+4. Verify Google Sign-In works
+5. Create more test accounts
+6. Test on real device (if possible)
+7. Celebrate! 🎉
+
+
+COMMON SHORTCUTS
+────────────────
+
+Build & Run:        Shift + F10
+Stop App:           Ctrl + F2
+Logcat:             Alt + 6
+Emulator Controls:  Alt + 7
+Terminal:           Alt + F12
+
+
+✨ YOU'RE ALL SET!
+─────────────────
+
+Everything is ready to run!
+
+Just follow the 7 steps above and your app will be running! 🚀
+
+It will show:
+✅ Login page with email & Google sign-in
+✅ Sign-up page with profile data
+✅ Home page with your REAL GPS location
+✅ Beautiful Material Design 3 UI
+✅ Bottom navigation with scanner button
+✅ All connected to Firebase!
+
+
+═════════════════════════════════════════════════════════════════════
+                         GO BUILD & RUN! 🚀
+═════════════════════════════════════════════════════════════════════
+

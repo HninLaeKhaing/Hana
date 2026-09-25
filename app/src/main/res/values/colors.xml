@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="screen_background">#FFF8F7F5</color>
+    <color name="brand_text">#FF1F2428</color>
+    <color name="body_text">#FF4D555D</color>
+    <color name="label_text">#FF7A7A7A</color>
+    <color name="placeholder_text">#FF8F9499</color>
+    <color name="hint_line">#FFD8D8D8</color>
+    <color name="input_background">#FFE9E9E9</color>
+    <color name="primary_action">#FF6E5148</color>
+    <color name="action_text">#FF6F5349</color>
+    <color name="google_button_stroke">#FFDDDDDD</color>
+</resources>
